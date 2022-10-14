@@ -2,7 +2,7 @@ import React,{useState,useContext} from 'react';
 import {FirebaseContext} from '../../store/Context'
 import Logo from '../../olx-logo.png';
 import './Login.css';
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link} from 'react-router-dom'
 
 function Login() {
 const [email,setEmail]=useState('')
@@ -49,7 +49,7 @@ const handleLogin=(e)=>{
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <Link to={'/signup'}>Signup</Link>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React, { useState, useContext } from 'react';
 import Logo from '../../olx-logo.png';
 import './Signup.css';
 import { FirebaseContext } from '../../store/Context'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link  } from 'react-router-dom'
 export default function Signup() {
   const history = useHistory()
   const [username, setUsername] = useState('')
@@ -85,7 +85,8 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a>Login</a>
+        {/* <a>Login</a> */}
+       <Link to={'/login'}>Login</Link>
       </div>
     </div>
   );
